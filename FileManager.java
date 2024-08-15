@@ -5,7 +5,6 @@ public class FileManager {
 
     private static final String FILE_NAME = "pessoas.txt";
 
-    // Save persons to file
     public void saveToFile(List<Person> personList) {
         try (PrintWriter writer = new PrintWriter(new FileWriter(FILE_NAME))) {
             for (Person person : personList) {
@@ -16,7 +15,6 @@ public class FileManager {
         }
     }
 
-    // Load persons from file
     public void loadFromFile(List<Person> personList) {
         File file = new File(FILE_NAME);
         if (file.exists()) {
